@@ -6,6 +6,7 @@ const port = 3000;
 mongoose.connect('mongodb://mongo:27017/demo', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  directConnection: true,
 });
 
 const Item = mongoose.model('Item', { name: String });
